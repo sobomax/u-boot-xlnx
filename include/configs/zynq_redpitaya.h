@@ -1,7 +1,7 @@
 /*
  * (C) Copyright 2013 Xilinx, Inc.
  *
- * Configuration for Zynq Evaluation and Development Board - ZedBoard
+ * Configuration for Red Pitaya - an open-source measurement and control tool.
  * See zynq-common.h for Zynq common configs
  *
  * SPDX-License-Identifier:	GPL-2.0+
