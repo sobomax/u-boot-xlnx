@@ -60,7 +60,7 @@ struct iou_scntr {
 #define iou_scntr ((struct iou_scntr *)ZYNQMP_IOU_SCNTR)
 
 /* Bootmode setting values */
-#define BOOT_MODES_MASK	0x0000000F
+#define BOOT_MODES_MASK	0x00000007
 #define QSPI_MODE_24BIT	0x00000001
 #define QSPI_MODE_32BIT	0x00000002
 #define SD_MODE		0x00000003
