@@ -27,8 +27,10 @@
 #define CONFIG_ZYNQ_EEPROM
 #define CONFIG_ENV_IS_IN_EEPROM
 #define CONFIG_ENV_EEPROM_IS_ON_I2C
-#define CONFIG_ENV_OFFSET           0
-#define CONFIG_CMD_SAVEENV         /* Command to save ENV to Flash */
+#define CONFIG_ENV_OFFSET              (2048*3)
+#define CONFIG_ENV_SIZE                1024 /* Total Size of Environment Sector */
+#define CONFIG_ENV_SECT_SIZE           CONFIG_ENV_SIZE
+#define CONFIG_CMD_SAVEENV             /* Command to save ENV to Flash */
 #define CONFIG_CMD_EEPROM
 
 #define CONFIG_ZYNQ_BOOT_FREEBSD
