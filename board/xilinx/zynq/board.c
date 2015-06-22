@@ -31,7 +31,7 @@ static xilinx_desc fpga100 = XILINX_XC7Z100_DESC(0x100);
 
 int board_init(void)
 {
-#if defined(CONFIG_ENV_IS_IN_EEPROM) && !defined(CONFIG_SPL_BUILD)
+#if defined(CONFIG_ENV_IS_IN_EEPROM) && !defined(CONFIG_SPL_BUILD) && 0
 	unsigned char eepromsel = CONFIG_SYS_I2C_MUX_EEPROM_SEL;
 #endif
 #if (defined(CONFIG_FPGA) && !defined(CONFIG_SPL_BUILD)) || \
@@ -70,7 +70,7 @@ int board_init(void)
 	fpga_init();
 	fpga_add(fpga_xilinx, &fpga);
 #endif
-#if defined(CONFIG_ENV_IS_IN_EEPROM) && !defined(CONFIG_SPL_BUILD)
+#if defined(CONFIG_ENV_IS_IN_EEPROM) && !defined(CONFIG_SPL_BUILD) && 0
 	if (eeprom_write(CONFIG_SYS_I2C_MUX_ADDR, 0, &eepromsel, 1))
 		puts("I2C:EEPROM selection failed\n");
 #endif
