@@ -213,26 +213,23 @@
 /* EEPROM */
 #ifdef CONFIG_ZYNQ_EEPROM
 # define CONFIG_CMD_EEPROM
-# define CONFIG_SYS_I2C_EEPROM_ADDR_LEN		2    /* Bytes */
-# define CONFIG_SYS_DEF_EEPROM_ADDR		0x50
-# define CONFIG_SYS_I2C_EEPROM_ADDR		0x50
-# define CONFIG_SYS_EEPROM_PAGE_WRITE_BITS	5    /* 32 Bytes page */
+# define CONFIG_SYS_I2C_EEPROM_ADDR_LEN		1
+# define CONFIG_SYS_I2C_EEPROM_ADDR		0x54
+# define CONFIG_SYS_EEPROM_PAGE_WRITE_BITS	4
 # define CONFIG_SYS_EEPROM_PAGE_WRITE_DELAY_MS	5
-# define CONFIG_SYS_EEPROM_SIZE			8192 /* Bytes */
+# define CONFIG_SYS_EEPROM_SIZE			1024 /* Bytes */
 # define CONFIG_SYS_I2C_MUX_ADDR		0x74
 # define CONFIG_SYS_I2C_MUX_EEPROM_SEL		0x4
 #endif
 
 /* Total Size of Environment Sector */
-#if !defined(CONFIG_ENV_SIZE)
-# define CONFIG_ENV_SIZE			(128 << 10)
-#endif
+#define CONFIG_ENV_SIZE			(128 << 10)
 
 /* Allow to overwrite serial and ethaddr */
 #define CONFIG_ENV_OVERWRITE
 
 /* Environment */
-#if !defined(CONFIG_ENV_IS_NOWHERE) && !defined(CONFIG_ENV_IS_IN_EEPROM)
+#ifndef CONFIG_ENV_IS_NOWHERE
 # ifndef CONFIG_SYS_NO_FLASH
 /* Environment in NOR flash */
 #  define CONFIG_ENV_IS_IN_FLASH
